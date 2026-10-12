@@ -1,170 +1,103 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Prédiag V10</title>
-<meta name="description" content="Pré-diagnostic gratuit de vos pages publiques face à la grille Qualiopi V10, applicable au 1er novembre 2026.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indicateur 2 Qualiopi (référentiel 2026) — vos taux de résultats, avec leurs modalités de calcul</title>
+<meta name="description" content="Depuis le décret n° 2026-728, les indicateurs de résultats publiés par un organisme de formation doivent préciser leurs modalités de calcul. Tableau de résultats conforme prêt à publier : 290 €, payable après livraison.">
 <style>
-:root{--bg:#fbfaf8;--fg:#1c1a17;--mut:#6b655c;--line:#e3dfd8;--acc:#9a4a1f;--acc2:#7a3a18;--card:#fff;--neuf:#9a2d2d;--fort:#9a6b1f;--ok:#2f6b42}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#17150f;--fg:#efe9e0;--mut:#a39a8c;--line:#312c24;--acc:#e0915f;--acc2:#f0a877;--card:#201d16}}
-:root[data-theme=dark]{--bg:#17150f;--fg:#efe9e0;--mut:#a39a8c;--line:#312c24;--acc:#e0915f;--acc2:#f0a877;--card:#201d16}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-.wrap{max-width:780px;margin:0 auto;padding:0 16px}
-header{padding:56px 0 18px}
-.kicker{display:inline-block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc);border-radius:99px;padding:4px 11px;margin-bottom:1.3rem}
-h1{font-size:clamp(1.65rem,4.6vw,2.4rem);line-height:1.18;margin:0 0 .6em;letter-spacing:-.015em}
-.lead{font-size:1.1rem;color:var(--mut);margin:0 0 1.6rem;max-width:62ch}
-h2{font-size:1.25rem;margin:2.6rem 0 .9em;letter-spacing:-.01em}
-h3{font-size:1rem;margin:0 0 .45em}
-.cta{display:inline-block;background:var(--acc);color:#fff;text-decoration:none;font-weight:600;padding:13px 22px;border-radius:8px;border:none}
-.cta:hover{background:var(--acc2)}
-.compte{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--neuf);border-radius:8px;padding:16px 18px;margin:0 0 2rem}
-.compte strong{color:var(--neuf)}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .compte strong{color:#f08a8a}}
-.grid{display:grid;gap:14px;grid-template-columns:1fr}
-@media(min-width:640px){.grid.deux{grid-template-columns:1fr 1fr}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
-.card.phare{border-color:var(--acc);box-shadow:0 1px 0 var(--acc) inset,0 0 0 1px var(--acc)}
-.badge{display:inline-block;font-size:.66rem;text-transform:uppercase;letter-spacing:.07em;padding:3px 8px;border-radius:99px;color:#fff;margin-left:.5em;vertical-align:middle}
-.badge.neuf{background:var(--neuf)}.badge.fort{background:var(--fort)}
-.prix{font-size:1.5rem;font-weight:700;letter-spacing:-.02em}
-.prix small{font-size:.8rem;font-weight:400;color:var(--mut)}
-ul{padding-left:1.15em;margin:.5em 0}
-li{margin:.3em 0}
-table{width:100%;border-collapse:collapse;font-size:.92rem;margin:.6em 0}
-th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
-th{font-weight:600;color:var(--mut);font-size:.82rem;text-transform:uppercase;letter-spacing:.04em}
-.exemple{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.84rem;background:var(--bg);border:1px dashed var(--line);border-radius:6px;padding:12px 14px;white-space:pre-wrap;overflow-x:auto}
-.franchise{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:2rem 0}
-.franchise h2{margin-top:0}
-footer{margin:3.4rem 0 0;padding:1.6rem 0 3rem;border-top:1px solid var(--line);font-size:.86rem;color:var(--mut)}
-a{color:var(--acc)}
-.ok{color:var(--ok);font-weight:600}
+  :root { --ink:#1b1f24; --muted:#5a6470; --line:#e3e6ea; --accent:#1f5fbf; --ok:#1e7a46; --ko:#b3261e; --bg:#fbfbfa; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); background:var(--bg); }
+  main { max-width:760px; margin:0 auto; padding:48px 22px 72px; }
+  h1 { font-size:1.9rem; line-height:1.25; margin:0 0 14px; letter-spacing:-.01em; }
+  h2 { font-size:1.25rem; margin:44px 0 10px; }
+  p { margin:0 0 14px; }
+  .lead { font-size:1.12rem; color:var(--muted); }
+  .quote { border-left:4px solid var(--accent); background:#fff; padding:14px 18px; margin:18px 0; }
+  .quote small { display:block; color:var(--muted); margin-top:6px; font-size:.85rem; }
+  .ex { display:grid; gap:12px; margin:16px 0; }
+  .ex div { background:#fff; border:1px solid var(--line); border-radius:8px; padding:12px 16px; }
+  .ex .ko b { color:var(--ko); } .ex .ok b { color:var(--ok); }
+  .note { font-size:.88rem; color:var(--muted); }
+  .offer { background:#fff; border:1px solid var(--line); border-radius:10px; padding:22px 24px; margin:18px 0; }
+  .price { font-size:1.6rem; font-weight:700; }
+  .price span { font-size:1rem; font-weight:400; color:var(--muted); }
+  ul { padding-left:20px; margin:8px 0 14px; } li { margin:4px 0; }
+  ol li { margin:6px 0; }
+  .cta { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:600; margin-top:6px; }
+  footer { border-top:1px solid var(--line); margin-top:56px; padding-top:18px; font-size:.85rem; color:var(--muted); }
+  a { color:var(--accent); }
 </style>
 </head>
 <body>
-<div class="wrap">
+<main>
 
-<header>
-  <span class="kicker">Décret n° 2026-728 du 1<sup>er</sup> août 2026</span>
-  <h1>Au 1<sup>er</sup> novembre 2026, tous les audits Qualiopi passent à la grille V10.</h1>
-  <p class="lead">Trois des changements portent sur ce que votre organisme <strong>publie</strong> —
-  donc sur ce qu'un auditeur peut vérifier avant même d'ouvrir vos dossiers.
-  Je regarde vos pages publiques et je vous dis précisément ce qui ne passera plus.
-  <strong>C'est gratuit et sans engagement.</strong></p>
-  <a class="cta" href="#contact">Demander mon pré-diagnostic gratuit</a>
-</header>
+<h1>Indicateur 2 : vos taux de résultats doivent désormais dire comment ils sont calculés</h1>
+<p class="lead">Le référentiel Qualiopi modifié par le décret n° 2026-728 s'applique aux audits réalisés à partir du
+<strong>1<sup>er</sup> novembre 2026</strong> (surveillance et renouvellement compris). Un point se voit avant même
+l'ouverture de vos dossiers : la page où vous publiez vos résultats.</p>
 
-<div class="compte">
-  <strong>Ce n'est pas une date marketing.</strong> Le décret n° 2026-728 du 1<sup>er</sup> août 2026
-  fait basculer <em>tous</em> les audits — initiaux, de surveillance <em>et</em> de renouvellement —
-  sur le Référentiel National Qualité version V10 : 33 indicateurs au lieu de 32, et 12 indicateurs
-  réécrits. L'échéance ne s'éteint pas le 1<sup>er</sup> novembre : elle commence.
+<div class="quote">
+  Indicateur 2 : « Le prestataire diffuse des indicateurs de résultats adaptés à la nature des prestations
+  mises en œuvre et des publics accueillis <strong>en précisant de manière transparente leurs modalités de calcul</strong>
+  ou en s'appuyant sur des dispositifs existants. »
+  <small>Décret n° 2026-728 du 1<sup>er</sup> août 2026, JO du 4 août 2026, entrée en vigueur le 1<sup>er</sup> novembre 2026 —
+  <a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054608509" rel="noopener">texte sur Légifrance</a>.</small>
 </div>
 
-<h2>Les trois changements qui se voient depuis la rue</h2>
+<p>Concrètement, beaucoup d'organismes affichent un pourcentage seul. Le décret ne fixe pas de modèle de présentation ;
+voici celle que nous recommandons, parce qu'elle répond sans ambiguïté à la question « comment ce chiffre est-il calculé ? » :</p>
 
-<div class="grid">
-  <div class="card">
-    <h3>Indicateur 2 — Indicateurs de résultats <span class="badge fort">renforcé</span></h3>
-    <p>C'est le changement le plus coûteux et le plus négligé. La V10 exige que les modalités de
-    calcul soient transparentes : pour <strong>chaque</strong> taux publié, il faut la formule,
-    la période, la population concernée, les exclusions et le nombre de réponses.</p>
-    <p class="exemple">❌ « 96 % de satisfaction »
+<div class="ex">
+  <div class="ko"><b>Aujourd'hui, fréquent :</b> « 96 % de satisfaction »</div>
+  <div class="ok"><b>Avec ses modalités de calcul :</b> « Satisfaction : 96 % — part des stagiaires ayant répondu
+  “satisfait” ou “très satisfait” au questionnaire de fin de formation. Période : 1<sup>er</sup> janvier – 31 décembre 2025.
+  142 stagiaires formés, 118 réponses (taux de retour 83 %). »</div>
+</div>
+<p class="note">Exemple illustratif : les chiffres ci-dessus sont fictifs.</p>
 
-✅ « Satisfaction : 96 % — moyenne des notes /10 ramenée en %,
-   session 2025-2026, 142 stagiaires formés, 118 réponses
-   (taux de retour 83 %), hors abandons avant J2. »</p>
-  </div>
-
-  <div class="card">
-    <h3>Indicateur 12 — Violences, harcèlement, discriminations <span class="badge neuf">nouveau</span></h3>
-    <p>Le décret ajoute l'obligation de mettre en place des mesures de prévention et de traitement
-    de toute situation de violence — y compris sexuelle et sexiste —, de harcèlement ou de
-    discrimination pendant la formation. La plupart des organismes n'en ont aucune trace publiée.</p>
-  </div>
-
-  <div class="card">
-    <h3>Indicateur 1 — Information du public <span class="badge fort">renforcé</span></h3>
-    <p>La V10 interdit désormais explicitement toute communication susceptible d'induire en erreur
-    sur l'accès, le contenu, les modalités ou le financement. En pratique : prérequis, durée,
-    tarif, délai d'accès et modalités pédagogiques doivent être lisibles sur chaque offre.</p>
-  </div>
+<h2>Ce que nous faisons pour vous</h2>
+<div class="offer">
+  <p><strong>Tableau de résultats « indicateur 2 », prêt à publier</strong></p>
+  <ul>
+    <li>Pour chaque taux que vous publiez (satisfaction, réussite, insertion, abandon…) : la définition, la méthode
+      de calcul, la période, l'effectif concerné et le nombre de réponses, rédigés à partir de <em>vos</em> données.</li>
+    <li>Le texte et le tableau à copier-coller sur votre site, plus une version PDF.</li>
+    <li>En complément, une relecture de vos fiches de formation publiques au regard de l'indicateur 1
+      (prérequis, objectifs, durée, modalités et délais d'accès, tarifs, accessibilité) : la liste précise de ce qui manque.</li>
+    <li>Livré sous 3 jours ouvrés après réception de vos chiffres.</li>
+  </ul>
+  <p class="price">290 € <span>· payable seulement après livraison, si le livrable vous convient</span></p>
+  <a class="cta" href="mailto:marvyn@kadanz.fr?subject=Tableau%20indicateur%202">Demander le tableau pour mon organisme</a>
 </div>
 
-<h2>Le pré-diagnostic gratuit</h2>
-<p>Je lis vos pages publiques et je vous renvoie, indicateur par indicateur :
-le constat, <strong>la citation exacte relevée sur votre site</strong>, l'exigence V10 correspondante,
-et ce qu'il faut corriger. Vous vérifiez chaque point vous-même en trente secondes.</p>
-<p>Aucune contrepartie, aucun engagement, et je ne vous recontacte pas si vous ne répondez pas.</p>
+<h2>Comment ça se passe</h2>
+<ol>
+  <li>Vous nous écrivez. Nous vous renvoyons la liste des chiffres à rassembler (une dizaine de lignes : nombre de stagiaires, nombre de réponses, période…).</li>
+  <li>Nous rédigeons le tableau et les textes, et nous relisons vos fiches de formation publiques.</li>
+  <li>Vous vérifiez, vous publiez. Vous ne payez qu'à ce moment-là.</li>
+</ol>
 
-<h2>Si vous voulez que je le corrige</h2>
-<div class="grid deux">
-  <div class="card phare">
-    <h3>Information publique conforme V10</h3>
-    <p class="prix">390 € <small>HT · livré en 5 jours ouvrés</small></p>
-    <ul>
-      <li>Audit complet de votre information publique (indicateurs 1, 2, 12, 26, 31)</li>
-      <li><strong>Les textes corrigés, prêts à copier-coller :</strong> tableau d'indicateurs
-      conforme (formule, période, population, exclusions, réponses), mention handicap,
-      procédure de réclamation, note de prévention des violences et du harcèlement</li>
-      <li>La liste des preuves que l'auditeur demandera sur ces indicateurs</li>
-    </ul>
-  </div>
-  <div class="card">
-    <h3>Dossier d'écart V10 complet</h3>
-    <p class="prix">890 € <small>HT · livré en 10 jours ouvrés</small></p>
-    <ul>
-      <li>Tout le palier précédent</li>
-      <li>Analyse d'écart <strong>sur les 33 indicateurs</strong>, par questionnaire guidé</li>
-      <li>Les trames documentaires mises à jour V10</li>
-      <li>Un plan d'action daté jusqu'à votre prochain audit</li>
-    </ul>
-  </div>
-</div>
-<p style="font-size:.9rem;color:var(--mut)">Pour situer : un kit documentaire Qualiopi se vend
-299-599 €, une préparation accompagnée 790-1 790 €, et un consultant Qualiopi facture
-600-1 000 € la journée. Le périmètre ci-dessus est volontairement étroit — et sa valeur est
-démontrable avant que vous ne payiez quoi que ce soit.</p>
+<h2>Pour situer le prix</h2>
+<p>Un kit documentaire Qualiopi se vend couramment entre 300 et 600 €, une préparation accompagnée entre 800 et 1 800 €,
+et une journée de consultant entre 600 et 1 000 €. Notre périmètre est volontairement étroit : les deux indicateurs qui
+portent sur ce que vous publiez.</p>
 
-<div class="franchise">
-<h2 style="margin-bottom:.7em">Ce que je ne suis pas</h2>
-<ul>
-  <li><strong>Je ne suis pas organisme certificateur ni auditeur accrédité.</strong> « Prédiag »
-  veut dire <em>pré</em>-diagnostic : un constat indicatif sur vos pages publiques, qui ne préjuge
-  pas de la décision de votre auditeur.</li>
-  <li><strong>Je ne garantis pas l'obtention ni le maintien de votre certification.</strong>
-  Personne ne peut le garantir, et qui vous le promet vous trompe.</li>
-  <li><strong>Je n'ai pas de référence client à afficher : ce service est nouveau.</strong>
-  C'est précisément pour ça que le diagnostic est gratuit — vous jugez sur pièces, pas sur
-  des témoignages.</li>
-</ul>
-</div>
-
-<h2 id="contact">Demander le pré-diagnostic</h2>
-<p>Écrivez-moi avec le nom de votre organisme et l'adresse de votre site.
-Je vous renvoie le pré-diagnostic sous 48 heures ouvrées.</p>
-<p><a class="cta" href="mailto:marvyn@kadanz.fr?subject=Pr%C3%A9-diagnostic%20V10&amp;body=Nom%20de%20l%27organisme%20%3A%20%0AAdresse%20du%20site%20%3A%20%0ANum%C3%A9ro%20de%20d%C3%A9claration%20d%27activit%C3%A9%20(optionnel)%20%3A%20%0A">Demander par email</a></p>
+<h2>Ce que nous ne sommes pas</h2>
+<p>Nous ne sommes ni organisme certificateur ni auditeur accrédité, et nous ne délivrons pas de conseil juridique.
+Nos constats portent uniquement sur vos pages publiques et ne préjugent pas de la décision de votre auditeur.
+Aucune garantie de certification n'est donnée.</p>
 
 <footer>
-  <p><strong>Prédiag V10</strong> — service opéré par Marvyn Gommard, en France.
-  Activité en phase de lancement : aucune facturation n'est émise à ce stade ; toute prestation
-  payante fera l'objet d'un devis écrit et d'un cadre déclaré avant exécution.</p>
-  <p><strong>Données personnelles.</strong> Les organismes contactés le sont à partir de la
-  Liste Publique des Organismes de Formation (article L.6351-7-1 du Code du travail) et de leurs
-  pages publiques, sur la base de l'intérêt légitime (article 6.1.f du RGPD), pour un objet en
-  rapport direct avec leur activité. Seules des adresses professionnelles publiées sont utilisées.
-  Pour ne plus être contacté, demandez-le par retour de message : la demande est appliquée
-  immédiatement et sans justification. Les coordonnées des prospects inactifs sont supprimées au
-  bout de 3 ans. Vous pouvez demander l'accès, la rectification ou l'effacement de vos données à
-  l'adresse de contact ci-dessus.</p>
-  <p><strong>Sources réglementaires.</strong> Décret n° 2026-728 du 1<sup>er</sup> août 2026 relatif
-  au référentiel national sur la qualité des actions concourant au développement des compétences ;
-  entrée en vigueur au 1<sup>er</sup> novembre 2026.</p>
+  Éditeur : Marvyn Gommard — <a href="mailto:marvyn@kadanz.fr">marvyn@kadanz.fr</a>.
+  Hébergement : GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.<br>
+  Cette page ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience.<br>
+  Prospection : si vous avez reçu un message de notre part et ne souhaitez plus être contacté,
+  écrivez « stop » à <a href="mailto:marvyn@kadanz.fr?subject=stop">marvyn@kadanz.fr</a> — votre adresse est alors définitivement exclue.<br>
+  Qualiopi est une marque déposée du ministère du Travail ; ce site n'est pas affilié au ministère.
 </footer>
 
-</div>
+</main>
 </body>
 </html>
